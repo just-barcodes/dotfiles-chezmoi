@@ -82,15 +82,15 @@ fi
 ### sources ###
 ##############################################################################
 # liquidprompt
-if [ -f ~/liquidprompt/liquidprompt ]; then
-    [[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+if [ -f ~/dotfiles-deps/liquidprompt/liquidprompt ]; then
+    [[ $- = *i* ]] && source ~/dotfiles-deps/liquidprompt/liquidprompt
 elif [ -f /usr/local/bin/liquidprompt/liquidprompt ]; then
     [[ $- = *i* ]] && source /usr/local/bin/liquidprompt/liquidprompt
 fi
 
 
-if [ -f ~/complete-alias/complete_alias ]; then
-    . ~/complete-alias/complete_alias
+if [ -f ~/dotfiles-deps/complete-alias/complete_alias ]; then
+    . ~/dotfiles-deps/complete-alias/complete_alias
     complete -F _complete_alias g
     complete -F _complete_alias k
 elif [ -f ~/.bash_completion.d/complete_alias ]; then
