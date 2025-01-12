@@ -60,14 +60,14 @@ filetype plugin indent on
 "for vim-airline (always display statusbar)
 set laststatus=2
 
-# runtime bundle/dragvisuals.vim
-# vmap  <expr>  <LEFT>   DVB_Drag('left')
-# vmap  <expr>  <RIGHT>  DVB_Drag('right')
-# vmap  <expr>  <DOWN>   DVB_Drag('down')
-# vmap  <expr>  <UP>     DVB_Drag('up')
+" runtime bundle/dragvisuals.vim
+" vmap  <expr>  <LEFT>   DVB_Drag('left')
+" vmap  <expr>  <RIGHT>  DVB_Drag('right')
+" vmap  <expr>  <DOWN>   DVB_Drag('down')
+" vmap  <expr>  <UP>     DVB_Drag('up')
 
 " Remove any introduced trailing whitespace after moving...
-# let g:DVB_TrimWS = 1
+" let g:DVB_TrimWS = 1
 
 let NERDTreeShowHidden = 1
 
