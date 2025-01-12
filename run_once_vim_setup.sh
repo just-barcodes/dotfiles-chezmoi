@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 echo "Running :PluginInstall in vim"
 vim +PluginInstall +qall
