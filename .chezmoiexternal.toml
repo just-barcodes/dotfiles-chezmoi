@@ -1,0 +1,9 @@
+["liquidprompt"]
+    type = "git-repo"
+    url = "https://github.com/liquidprompt/liquidprompt.git"
+    refreshPeriod = "168h"
+["complete-alias"]
+    type = "git-repo"
+    url = "https://github.com/cykerway/complete-alias.git"
+    refreshPeriod = "1680h"
+
