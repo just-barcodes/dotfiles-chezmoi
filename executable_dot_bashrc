@@ -109,7 +109,7 @@ fi
 alias la='ls -hAlF'
 alias l='ls -lF'
 
-if command -v trash ; then
+if command -v trash 2>&1 >/dev/null ; then
     alias rm=trash
 fi
 
