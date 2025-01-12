@@ -82,9 +82,9 @@ fi
 ### sources ###
 ##############################################################################
 # liquidprompt
-if [ -f "~/liquidprompt/liquidprompt" ]; then
+if [ -f ~/liquidprompt/liquidprompt ]; then
     [[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
-elif [ -f "/usr/local/bin/liquidprompt/liquidprompt" ]; then
+elif [ -f /usr/local/bin/liquidprompt/liquidprompt ]; then
     [[ $- = *i* ]] && source /usr/local/bin/liquidprompt/liquidprompt
 fi
 
@@ -199,6 +199,4 @@ tmux_adjust_shlvl
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
 
