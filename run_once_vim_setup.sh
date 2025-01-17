@@ -1,6 +1,6 @@
 #!/bin/bash
 
 echo "Running :PluginInstall in vim"
-vim +"colorscheme blue" +PluginInstall +qall
+vim +PluginInstall +qall
 echo "Done!"
 
