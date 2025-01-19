@@ -8,7 +8,8 @@ if [ $USER = 'vscode' ]; then
         sudo apt-get update && sudo apt-get install -y zsh fonts-powerline
     fi
 
-    sudo chsh -s $(which zsh)
+    # use vscode user setting instead
+    # sudo chsh -s $(which zsh)
 
     # alternative for fonts-powerline:
     # git clone https://github.com/powerline/fonts.git --depth=1
