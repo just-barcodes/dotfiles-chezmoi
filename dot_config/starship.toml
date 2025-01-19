@@ -1,5 +1,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# $aws\
+# [](fg:color_aqua bg:color_red)\
+
 format = """
 [](color_orange)\
 $os\
@@ -9,7 +12,9 @@ $directory\
 [](fg:color_yellow bg:color_aqua)\
 $git_branch\
 $git_status\
-[](fg:color_aqua bg:color_blue)\
+[](fg:color_aqua bg:color_yellow)\
+$aws\
+[](fg:color_yellow bg:color_blue)\
 $c\
 $rust\
 $golang\
@@ -27,6 +32,8 @@ $time\
 [ ](fg:color_bg1)\
 $line_break$character"""
 
+# [](fg:color_red bg:color_blue)\
+
 palette = 'gruvbox_dark'
 
 [palettes.gruvbox_dark]
@@ -40,6 +47,13 @@ color_orange = '#d65d0e'
 color_purple = '#b16286'
 color_red = '#cc241d'
 color_yellow = '#d79921'
+
+[aws]
+format = '[$symbol($profile )(\($region\) )(\[$duration\])]($style)'
+style = "fg:color_fg0 bg:color_yellow"
+symbol = '☁️ '
+disabled = false
+force_display = false
 
 [os]
 disabled = false
