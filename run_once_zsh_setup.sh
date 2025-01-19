@@ -2,15 +2,16 @@
 
 
 if [ $USER = 'vscode' ]; then
-    sudo apt-get install -y zsh fonts-powerline
+    sudo apt-get update && sudo apt-get install -y zsh
+    # fonts-powerline
     chsh -s $(which zsh)
 
     # alternative for fonts-powerline:
-    # git clone https://github.com/powerline/fonts.git --depth=1
-    # cd fonts
-    # ./install.sh
-    # cd ..
-    # rm -rf fonts
+    git clone https://github.com/powerline/fonts.git --depth=1
+    cd fonts
+    ./install.sh
+    cd ..
+    rm -rf fonts
 fi
 
 
