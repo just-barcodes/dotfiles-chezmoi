@@ -1,8 +1,5 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# $aws\
-# [](fg:color_aqua bg:color_red)\
-
 format = """
 [](color_orange)\
 $os\
@@ -31,8 +28,6 @@ $conda\
 $time\
 [ ](fg:color_bg1)\
 $line_break$character"""
-
-# [](fg:color_red bg:color_blue)\
 
 palette = 'gruvbox_dark'
 
