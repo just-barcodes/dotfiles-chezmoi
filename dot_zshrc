@@ -37,7 +37,9 @@ eval "$(starship init zsh)"
 # export LANG=en_US.UTF-8
 export EDITOR='vim'
 
-set -o vi
+# set -o vi
+bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 # do not exit shell with Ctrl-D
 set -o ignoreeof
