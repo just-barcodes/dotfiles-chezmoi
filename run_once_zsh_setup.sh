@@ -10,9 +10,6 @@ if [ $USER = 'vscode' ]; then
 
     curl -sS https://starship.rs/install.sh | sh -s -- -y
 
-    # use vscode user setting instead
-    # sudo chsh -s $(which zsh)
-
     # alternative for fonts-powerline:
     # git clone https://github.com/powerline/fonts.git --depth=1
     # cd fonts
@@ -23,10 +20,15 @@ fi
 
 
 if [ ! -d "${HOME}/.oh-my-zsh/" ]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-    # alternative:
-    # sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    if command -v curl 2>&1 >/dev/null
+    then
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    elif command -v wget 2>&1 >/dev/null
+    then
+        sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    else
+        echo "ERROR: Need curl or wget installed"
+    fi
 else
     echo "Skipping oh-my-zsh installation ('$HOME.oh-my-zsh/' already exists)"
 fi
