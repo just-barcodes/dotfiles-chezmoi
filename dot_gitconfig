@@ -1,6 +1,6 @@
 [alias]
     st = status
-    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     a = add -A :/
     ls = log --oneline
     ca = commit --amend
