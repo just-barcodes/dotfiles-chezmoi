@@ -8,6 +8,8 @@ if [ $USER = 'vscode' ]; then
         sudo apt-get update && sudo apt-get install -y zsh fonts-powerline
     fi
 
+    curl -sS https://starship.rs/install.sh | sh -s -- -y
+
     # use vscode user setting instead
     # sudo chsh -s $(which zsh)
 
@@ -25,8 +27,6 @@ if [ ! -d "${HOME}/.oh-my-zsh/" ]; then
 
     # alternative:
     # sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-    curl -sS https://starship.rs/install.sh | sh
 else
     echo "Skipping oh-my-zsh installation ('$HOME.oh-my-zsh/' already exists)"
 fi
