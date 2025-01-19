@@ -3,6 +3,7 @@
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     a = add -A :/
     ls = log --oneline
+    ca = commit --amend
     caa = commit -a --amend -C HEAD
     cm = commit -m
     cam = commit -am
