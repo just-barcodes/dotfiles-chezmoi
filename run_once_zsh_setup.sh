@@ -25,6 +25,8 @@ if [ ! -d "${HOME}/.oh-my-zsh/" ]; then
 
     # alternative:
     # sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+    curl -sS https://starship.rs/install.sh | sh
 else
     echo "Skipping oh-my-zsh installation ('$HOME.oh-my-zsh/' already exists)"
 fi
