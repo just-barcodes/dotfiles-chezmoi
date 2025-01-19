@@ -1,10 +1,13 @@
 #!/bin/bash
 
-sudo apt-get update && sudo apt-get install fontconfig
+# for VS Code / WSL
+# fonts need to be installed on (windows) host !!
 
-curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash
+# sudo apt-get update && sudo apt-get install fontconfig
 
-getnf -i FiraCode
+# curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash
 
-fc-cache
+# getnf -i FiraCode
+
+# fc-cache
 
