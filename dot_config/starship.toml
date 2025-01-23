@@ -108,7 +108,8 @@ commit_hash_length = 8
 style = "bold white"
 
 [git_state]
-format = '[\($state( $progress_current of $progress_total)\)]($style) '
+style = "fg:#CC241D bg:color_aqua"
+format = '[--\($state( $progress_current of $progress_total)\)--]($style)'
 
 [git_status]
 style = "fg:#CC241D bg:color_aqua"
