@@ -111,18 +111,18 @@ style = "bold white"
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
 
 [git_status]
-style = "fg:color_fg0 bg:color_aqua"
+style = "fg:#CC241D bg:color_aqua"
 format = '([$all_status$ahead_behind]($style))'
 
-conflicted = "⚔️ "
-ahead = "➕×${count} "
-behind = "➖×${count} "
-diverged = "🔱 ➕×${ahead_count} ➖×${behind_count} "
-untracked = "🤷×${count} "
-stashed = "📦 "
-modified = "📝×${count} "
-staged = "🗃️×${count} "
-renamed = "📛×${count} "
+conflicted = "✗ "
+ahead = "↑×${count} "
+behind = "↓×${count} "
+diverged = "⇄ ↑×${ahead_count} ↓×${behind_count} "
+untracked = "??×${count} "
+stashed = "📥 "
+modified = "✎ ×${count} "
+staged = "▣×${count} "
+renamed = "↪ ×${count} "
 deleted = "🗑️×${count} "
 
 [nodejs]
