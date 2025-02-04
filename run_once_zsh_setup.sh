@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-if [ $USER = 'vscode' ]; then
+if [[ $USER = @('vscode'|'node') ]]; then
 
     if ! command -v zsh 2>&1 >/dev/null
     then
