@@ -36,6 +36,9 @@
 [diff]
     tool = vimdiff
     algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
 [push]
     default = simple
 [pull]
@@ -49,3 +52,6 @@
     clean = git-lfs clean -- %f
 [protocol "file"]
     allow = always
+[tag]
+    sort = version:refname
+
