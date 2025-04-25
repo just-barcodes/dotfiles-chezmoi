@@ -1,0 +1,6 @@
+podman
+vim
+zsh
+fonts-powerline
+qemu-system-x86
+
