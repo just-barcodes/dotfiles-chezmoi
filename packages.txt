@@ -8,6 +8,7 @@ zip
 ripgrep
 fonts-noto-color-emoji
 fzf
+gcc
 
 ## Neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
