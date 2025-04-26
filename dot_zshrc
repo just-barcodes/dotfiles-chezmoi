@@ -1,4 +1,4 @@
-export PATH=$HOME/.local/bin:$PATH:/opt/nvim-linux-x86_64/bin
+export PATH=$HOME/.local/bin:$PATH
 
 ###############################################
 ### Oh my zsh settings ###
