@@ -3,4 +3,18 @@ vim
 zsh
 fonts-powerline
 qemu-system-x86
+build-essential
+zip
+ripgrep
+fonts-noto-color-emoji
+fzf
 
+## Neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+rm nvim-linux-x86_64.tar.gz
+
+## Nerdfont
+https://www.nerdfonts.com/
+-> usually use Fira Code
