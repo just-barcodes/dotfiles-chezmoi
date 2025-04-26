@@ -14,11 +14,13 @@ require("autocommands")
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 if vim.fn.exists("g:vscode") == 0 then
+	-- only load plugins if not in VSCode
 	require("lazy-bootstrap")
 end
 
 -- [[ Configure and install plugins ]]
 if vim.fn.exists("g:vscode") == 0 then
+	-- only load plugins if not in VSCode
 	require("lazy-plugins")
 end
 
