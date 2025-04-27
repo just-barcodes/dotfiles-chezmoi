@@ -20,3 +20,8 @@ sudo ln -s /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
 ## Nerdfont
 https://www.nerdfonts.com/
 -> usually use Fira Code
+
+## WSL Settings
+### podman
+wsl.exe -u root -e mount --make-rshared /
+
