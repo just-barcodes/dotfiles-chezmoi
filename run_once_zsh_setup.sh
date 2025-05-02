@@ -1,21 +1,20 @@
 #!/bin/bash
 
-
-if [[ $USER = @('vscode'|'node') ]]; then
-
+{{ if eq .chezmoi.osRelease.id "debian" }}
     if ! command -v zsh 2>&1 >/dev/null
     then
         sudo apt-get update && sudo apt-get install -y zsh fonts-powerline
     fi
+{{ end }}
 
-    curl -sS https://starship.rs/install.sh | sh -s -- -y
 
-    # alternative for fonts-powerline:
-    # git clone https://github.com/powerline/fonts.git --depth=1
-    # cd fonts
-    # ./install.sh
-    # cd ..
-    # rm -rf fonts
+if ! command -v starship 2>&1 >/dev/null
+    if command -v curl 2>&1 >/dev/null
+    then
+        curl -sS https://starship.rs/install.sh | sh -s -- -y
+    else
+        echo "ERROR: Need curl installed"
+    fi
 fi
 
 
