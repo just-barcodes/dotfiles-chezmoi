@@ -1,14 +1,14 @@
 #!/bin/bash
 
-{{ if eq .chezmoi.osRelease.id "debian" }}
-    if ! command -v zsh 2>&1 >/dev/null
-    then
-        sudo apt-get update && sudo apt-get install -y zsh fonts-powerline
-    fi
+{{ if eq .chezmoi.osRelease.id "debian" "ubuntu" }}
+if ! command -v zsh 2>&1 >/dev/null
+then
+    sudo apt-get update && sudo apt-get install -y zsh fonts-powerline
+fi
 {{ end }}
 
 
-if ! command -v starship 2>&1 >/dev/null
+if ! command -v starship 2>&1 >/dev/null ; then
     if command -v curl 2>&1 >/dev/null
     then
         curl -sS https://starship.rs/install.sh | sh -s -- -y
