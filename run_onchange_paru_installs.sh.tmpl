@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -euxo pipefail
+
+{{ if not (eq .chezmoi.osRelease.id "arch") }}
+	echo "Not running arch... exiting"
+	exit
+{{ end }}
+
+PACKAGES=(
+	portmaster-stub-bin
+	google-chrome
+	insync
+	prospect-mail-bin
+	visual-studio-code-bin
+	jetbrains-toolbox
+	betterbird-bin
+)
+
+paru -Syyu --needed "${PACKAGES[@]}"
+

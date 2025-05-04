@@ -1,0 +1,97 @@
+#!/bin/bash
+
+set -euxo pipefail
+
+{{ if not (eq .chezmoi.osRelease.id "arch") }}
+	echo "Not running arch... exiting"
+	exit
+{{ end }}
+
+# System
+SYSTEM_PACKAGES=(
+	vim
+	git
+	openssh
+	zsh
+	gcc
+	wl-clipboard
+	base-devel
+	less
+	man-db
+	tldr
+	alsa-utils
+	fzf
+	usbutils
+	network-manager-applet
+	fd
+	cups
+	cups-pdf
+)
+
+
+# Laptop specific
+LAPTOP_PACKAGES=(
+	sof-firmware
+	iio-sensor-proxy
+	fprintd
+
+)
+
+
+# Fonts
+FONTS_PACKAGES=(
+	ttf-fira-code
+	ttf-fira-mono
+	ttf-jetbrains-mono
+	ttf-roboto-mono
+	ttf-dejavu
+	ttf-bitstream-vera
+	ttf-input-nerd
+	ttf-firacode-nerd
+)
+
+
+# Apps
+APPS_PACKAGES=(
+	firefox-developer-edition
+	alacritty
+	neovim
+	podman
+	podman-desktop
+	chezmoi
+	obsidian
+	chromium
+	tailscale
+	zip
+	unzip
+	trash-cli
+	tmux
+	htop
+	proton-vpn-gtk-app
+	kubectl
+	luarocks
+	cmake
+)
+
+
+# KDE Apps
+KDE_PACKAGES=(
+	ark
+	isoimagewriter
+	kwalletmanager
+	kcalc
+	dolphin
+	dolphin-plugins
+	okular
+	bluedevil
+	system-config-printer
+)
+
+
+sudo pacman -Syyu --needed --noconfirm \
+	"${SYSTEM_PACKAGES[@]}" \
+	"${LAPTOP_PACKAGES[@]}" \
+	"${FONTS_PACKAGES[@]}" \
+	"${APPS_PACKAGES[@]}" \
+	"${KDE_PACKAGES[@]}"
+
