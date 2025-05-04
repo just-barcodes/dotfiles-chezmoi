@@ -27,6 +27,10 @@ require("lazy").setup({
 				},
 			},
 		},
+
+		attachments = {
+			img_folder = "_attachments",
+		},
 	},
 
 	{
