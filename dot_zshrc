@@ -80,6 +80,7 @@ alias egrep='egrep --color=auto'
 alias g='git'
 alias git-setup-private='git config user.name "Sam Rupprechter" && git config user.email "sam.rupprechter@gmail.com"'
 alias git-setup-mlab='git config user.name "Sam Rupprechter" && git config user.email "samuel.rupprechter@ml-architects.ch"'
+alias git-setup-just-barcodes='git config user.name "Just Barcodes" && git config user.email "just-barcodes@users.noreply.github.com"'
 
 # tmux
 alias t='tmux'
