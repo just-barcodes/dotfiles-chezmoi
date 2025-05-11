@@ -85,9 +85,6 @@ alias git-setup-just-barcodes='git config user.name "Just Barcodes" && git confi
 # tmux
 alias t='tmux'
 
-# emacs
-alias emacs='emacs26'
-
 # kubernetes
 alias k='kubectl'
 
