@@ -133,7 +133,7 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [General]
-ColorSchemeHash=8d483e98b770fbeba364db371382301dbfc92748
+ColorSchemeHash=98139d0bac64c4e9f97721675584832c7c7a0bf0
 
 [KDE]
 AnimationDurationFactor=0
@@ -158,6 +158,10 @@ Sort hidden files last=false
 Sort reversed=false
 Speedbar Width=140
 View Style=DetailTree
+
+[PreviewSettings]
+EnableRemoteFolderThumbnail=false
+MaximumRemoteSize=0
 
 [Sounds]
 Enable=false
