@@ -1,3 +1,5 @@
+; https://github.com/jtroo/kanata/blob/main/docs/config.adoc
+
 ;; defsrc is still necessary
 (defcfg
   process-unmapped-keys yes
