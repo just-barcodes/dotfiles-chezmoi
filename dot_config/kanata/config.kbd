@@ -1,4 +1,3 @@
-;; defsrc is still necessary
 (defcfg
   process-unmapped-keys yes
 )
@@ -6,6 +5,7 @@
 (defsrc
   a s d f j k l ;
 )
+
 (defvar
   tap-time 150
   hold-time 200
@@ -15,13 +15,20 @@
   a (multi f24 (tap-hold $tap-time $hold-time a lmet))
   s (multi f24 (tap-hold $tap-time $hold-time s lalt))
   d (multi f24 (tap-hold $tap-time $hold-time d lctl))
-  f (multi f24 (tap-hold $tap-time $hold-time f lsft))
-  j (multi f24 (tap-hold $tap-time $hold-time j rsft))
+  f (chord fj f)
+  j (chord fj j)
   k (multi f24 (tap-hold $tap-time $hold-time k rctl))
   l (multi f24 (tap-hold $tap-time $hold-time l ralt))
   ; (multi f24 (tap-hold $tap-time $hold-time ; rmet))
 )
 
+(defchords fj 100
+  (f j) esc
+  (f) (multi f24 (tap-hold $tap-time $hold-time f lsft))
+  (j) (multi f24 (tap-hold $tap-time $hold-time j rsft))
+)
+
 (deflayer base
   @a @s @d @f @j @k @l @;
 )
+
