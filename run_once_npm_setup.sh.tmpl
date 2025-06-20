@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -euxo pipefail
+
+{{ if not (eq .chezmoi.osRelease.id "arch") }}
+    echo "Not running arch... exiting"
+    exit
+{{ end }}
+
+mkdir -p $HOME/.npm-global
+
