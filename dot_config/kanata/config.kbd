@@ -1,5 +1,8 @@
 (defcfg
   process-unmapped-keys yes
+
+  ;; only match the built-in keyboard
+  linux-dev /dev/input/by-path/platform-i8042-serio-0-event-kbd
 )
 
 (defsrc
