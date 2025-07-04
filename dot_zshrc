@@ -96,3 +96,6 @@ alias cd..='cd ..'
 alias cdd='cd ~/Desktop'
 alias cdw='cd ~/workspace'
 
+# kanata
+alias hm='sudo kanata --cfg .config/kanata/config.kbd'
+
