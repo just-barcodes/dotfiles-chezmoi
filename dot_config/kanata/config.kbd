@@ -6,7 +6,10 @@
 )
 
 (defsrc
-  a s d f g h j k l
+  ;; need to define all keys to manage here
+  a s d f g h j k l ;
+  < z x c v
+  spc 
 )
 
 (defvar
@@ -15,15 +18,23 @@
 )
 
 (defalias
+
+  ;; Home row mods
   a (multi f24 (tap-hold $tap-time $hold-time a lmet))
   s (multi f24 (tap-hold $tap-time $hold-time s lalt))
   d (multi f24 (tap-hold $tap-time $hold-time d lctl))
   f (multi f24 (tap-hold $tap-time $hold-time f lsft))
-  g (chord gh g)
-  h (chord gh h)
+
   j (multi f24 (tap-hold $tap-time $hold-time j rsft))
   k (multi f24 (tap-hold $tap-time $hold-time k rctl))
   l (multi f24 (tap-hold $tap-time $hold-time l ralt))
+
+  ;; Match escape
+  g (chord gh g)
+  h (chord gh h)
+
+  ;; Space key: tap for space, hold for symbol layer
+  spc_sym (tap-hold 200 200 spc (layer-while-held symbols))
 )
 
 (defchords gh 100
@@ -33,6 +44,14 @@
 )
 
 (deflayer base
-  @a @s @d @f @g @h @j @k @l
+  @a @s @d @f @g @h @j @k @l ;
+  _ _ _ _ _
+  @spc_sym 
+)
+
+(deflayer symbols
+  S-6 = S-- S-4 S-8 _ lsft lctl lalt lmet
+  _ S-\ min S-. /
+  spc
 )
 
