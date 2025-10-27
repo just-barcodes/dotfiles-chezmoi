@@ -8,7 +8,7 @@ set -euxo pipefail
 {{ end }}
 
 PACKAGES=(
-	portmaster-stub-bin
+	portmaster-bin
 	google-chrome
 	insync
 	prospect-mail-bin
@@ -21,6 +21,9 @@ PACKAGES=(
 	bruno-bin
 	appimagelauncher
 	kanata
+	walker
+	lazydocker
+	zen-browser-bin
 )
 
 paru -Syyu --needed "${PACKAGES[@]}"

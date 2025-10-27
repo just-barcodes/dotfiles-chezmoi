@@ -31,6 +31,21 @@ SYSTEM_PACKAGES=(
 	fwupd
 	dosfstools
 	ntfsprogs
+	brightnessctl
+	pamixer
+	pavucontrol
+	btop
+)
+
+HYPRLAND=(
+	hyprland
+	uwsm
+	meson
+	cpio
+	glaze
+	waybar
+	wofi
+	hyprlock
 )
 
 # Developer
@@ -87,6 +102,7 @@ APPS_PACKAGES=(
 	luarocks
 	cmake
 	libreoffice-fresh
+	spotify-launcher
 )
 
 
@@ -107,6 +123,7 @@ KDE_PACKAGES=(
 
 sudo pacman -Syyu --needed --noconfirm \
 	"${SYSTEM_PACKAGES[@]}" \
+	"${HYPRLAND[@]}" \
 	"${DEVELOPER_PACKAGES[@]}" \
 	"${LAPTOP_PACKAGES[@]}" \
 	"${FONTS_PACKAGES[@]}" \
