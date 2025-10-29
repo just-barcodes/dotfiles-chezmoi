@@ -8,11 +8,9 @@
 
   // Workspaces (Hyprland)
   "hyprland/workspaces": {
-    // "on-scroll-up": "hyprctl dispatch workspace r-1",
-    // "on-scroll-down": "hyprctl dispatch workspace r+1",
     "on-click": "activate",
     "active-only": false,
-    "all-outputs": true,
+    // "all-outputs": true,
     // "format": "{}",
     "format": "{icon}",
     // "icon-size": 80,
@@ -30,20 +28,9 @@
       "8": "",
       "9": "",
       "10": ""
-// 󰈙 (notebook)
-//  (vault)
-// 󰠮 (note/memo)
-//  (monitor/performance)
- // (heartbeat, system load)
-  // 󰍛 (CPU/gauge)
-//  (brain)
-//  (circuit brain)
-// 󰧑 (robot head)
-//  (paper plane)
-//  (mailbox)
     },
     "persistent-workspaces": {
-      "*": 5
+      "*": 0
     }
   },
 
@@ -51,17 +38,17 @@
   // Memory / CPU / Temp
   "memory": {
     "format": " {: >3}%",
-    "on-click": "hyprctl dispatch workspace 10"
+    "on-click": "hyprctl dispatch focusworkspaceoncurrentmonitor 10"
   },
   "cpu": {
     "format": "󰘚 {usage: >3}%",
-    "on-click": "hyprctl dispatch workspace 10"
+    "on-click": "hyprctl dispatch focusworkspaceoncurrentmonitor 10"
   },
   "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
     "critical-threshold": 80,
     "format": "  {temperatureC}°C",
-    "on-click": "hyprctl dispatch workspace 10"
+    "on-click": "hyprctl dispatch focusworkspaceoncurrentmonitor 10"
   },
 
   // Idle inhibitor

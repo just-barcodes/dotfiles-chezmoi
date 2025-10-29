@@ -26,6 +26,7 @@
 
 (defsrc
   ;; need to define all keys to manage here
+  esc caps
   a s d f g h j k l ;
   < z x c v
   spc 
@@ -63,12 +64,14 @@
 )
 
 (deflayer base
+  caps esc
   @a @s @d @f @g @h @j @k @l ;
   _ _ _ _ _
   @spc_sym 
 )
 
 (deflayer symbols
+  caps esc
   S-6 = S-- S-4 S-8 _ lsft lctl lalt lmet
   _ S-\ min S-. /
   spc
