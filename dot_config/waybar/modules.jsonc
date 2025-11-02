@@ -1,10 +1,10 @@
 {
   // Launcher
-  "custom/launcher": {
-    "format": "",
-    "on-click": "walker",
-    "tooltip": false
-  },
+  // "custom/launcher": {
+  //   "format": "",
+  //   "on-click": "walker",
+  //   "tooltip": false
+  // },
 
   // Workspaces (Hyprland)
   "hyprland/workspaces": {
@@ -15,19 +15,23 @@
     "format": "{icon}",
     // "icon-size": 80,
     "format-icons": {
-      "urgent": "",
+      // "urgent": "",
       // "active": "",
-      "default": "",
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "🎵",
-      "7": "󰠮",
-      "8": "",
-      "9": "",
-      "10": ""
+      "default": "?",
+      "1": "[h]",
+      "2": "[j]",
+      "3": "[k]",
+      "4": "[l]",
+      "50": "",  // tmux; alt icon: 
+      "60": "󰅨",  // vscode / ide; alt icon: 󰨞
+      "70": "󰠮",  // obsidian
+      "80": "",  // AI
+      "90": "",  // email
+      "91": "󰊻",  // teams; alt icon: 
+      "95": "",  // youtube
+      "96": "🎵", // spotify
+      "98": "", // docker
+      "99": "",  // btop
     },
     "persistent-workspaces": {
       "*": 0
@@ -38,17 +42,17 @@
   // Memory / CPU / Temp
   "memory": {
     "format": " {: >3}%",
-    "on-click": "hyprctl dispatch focusworkspaceoncurrentmonitor 10"
+    "on-click": "hyprctl dispatch focusworkspaceoncurrentmonitor 99"
   },
   "cpu": {
     "format": "󰘚 {usage: >3}%",
-    "on-click": "hyprctl dispatch focusworkspaceoncurrentmonitor 10"
+    "on-click": "hyprctl dispatch focusworkspaceoncurrentmonitor 99"
   },
   "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
     "critical-threshold": 80,
     "format": "  {temperatureC}°C",
-    "on-click": "hyprctl dispatch focusworkspaceoncurrentmonitor 10"
+    "on-click": "hyprctl dispatch focusworkspaceoncurrentmonitor 99"
   },
 
   // Idle inhibitor
@@ -62,14 +66,19 @@
     "tooltip-format-deactivated": "Idle inhibitor: OFF"
   },
 
-  // Battery
   "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon} {capacity: >3}%",
-    "format-icons": ["", "", "", "", ""]
+    "bat": "BAT0",
+    "adapter": "AC",
+    "udev": true,             // instant updates on plug/unplug
+    "interval": 10,            // fallback polling; keep small if udev is unreliable
+    "states": { "warning": 30, "critical": 15 },
+    "format": "{icon} {capacity:>3}%",
+    "format-charging": "⚡ {icon} {capacity:>3}%",
+    "format-full": " {capacity:>3}%",
+    "format-icons": {
+      "default": ["","","","",""],
+      "charging": ["","","","",""]
+    }
   },
 
   // Language (Hyprland)

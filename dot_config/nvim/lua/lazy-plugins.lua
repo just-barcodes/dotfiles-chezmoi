@@ -2,36 +2,40 @@ require("lazy").setup({
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
 	{
-		"obsidian-nvim/obsidian.nvim",
-		version = "*", -- recommended, use latest release instead of latest commit
-		lazy = true,
-		ft = "markdown",
-		-- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
-		-- event = {
-		--   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
-		--   -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
-		--   -- refer to `:h file-pattern` for more examples
-		--   "BufReadPre path/to/my-vault/*.md",
-		--   "BufNewFile path/to/my-vault/*.md",
-		-- },
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		---@module 'obsidian'
-		---@type obsidian.config.ClientOpts
-		opts = {
-			workspaces = {
-				{
-					name = "personal",
-					path = "~/Documents/SAM",
-				},
-			},
-		},
-
-		attachments = {
-			img_folder = "_attachments",
-		},
+		"calind/selenized.nvim",
 	},
+
+	-- {
+	-- 	"obsidian-nvim/obsidian.nvim",
+	-- 	version = "*", -- recommended, use latest release instead of latest commit
+	-- 	lazy = true,
+	-- 	ft = "markdown",
+	-- 	-- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
+	-- 	-- event = {
+	-- 	--   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
+	-- 	--   -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
+	-- 	--   -- refer to `:h file-pattern` for more examples
+	-- 	--   "BufReadPre path/to/my-vault/*.md",
+	-- 	--   "BufNewFile path/to/my-vault/*.md",
+	-- 	-- },
+	-- 	dependencies = {
+	-- 		"nvim-lua/plenary.nvim",
+	-- 	},
+	-- 	---@module 'obsidian'
+	-- 	---@type obsidian.config.ClientOpts
+	-- 	opts = {
+	-- 		workspaces = {
+	-- 			{
+	-- 				name = "personal",
+	-- 				path = "~/Documents/SAM",
+	-- 			},
+	-- 		},
+	-- 	},
+	--
+	-- 	attachments = {
+	-- 		img_folder = "_attachments",
+	-- 	},
+	-- },
 
 	{
 		"lewis6991/gitsigns.nvim",
@@ -564,16 +568,16 @@ require("lazy").setup({
 		},
 	},
 
-	{
-		"maxmx03/solarized.nvim",
-		lazy = false,
-		priority = 1000, -- Make sure to load this before all the other start plugins.
-		opts = { variant = "summer" },
-		config = function(_, opts)
-			require("solarized").setup(opts)
-			vim.cmd.colorscheme("solarized")
-		end,
-	},
+	-- {
+	-- 	"maxmx03/solarized.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000, -- Make sure to load this before all the other start plugins.
+	-- 	opts = { variant = "summer" },
+	-- 	config = function(_, opts)
+	-- 		require("solarized").setup(opts)
+	-- 		vim.cmd.colorscheme("solarized")
+	-- 	end,
+	-- },
 
 	-- Highlight todo, notes, etc in comments
 	{
@@ -624,6 +628,7 @@ require("lazy").setup({
 				"bash",
 				"c",
 				"diff",
+				"go",
 				"html",
 				"lua",
 				"luadoc",

@@ -29,3 +29,11 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 vim.keymap.set("n", "<Leader>p", '"+p', { desc = "Paste from shared clipboard" })
 vim.keymap.set("n", "<Leader>P", '"+P', { desc = "Paste from shared clipboard" })
 vim.keymap.set("v", "<Leader>y", '"+y', { desc = "Copy into shared clipboard" })
+
+-- use ctrl / to comment
+vim.keymap.set("n", "<C-_>", "gcc", { noremap = true, remap = true })
+vim.keymap.set("v", "<C-_>", "gc", { noremap = true, remap = true })
+
+-- save using ctrl s
+vim.keymap.set("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
+-- vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>i", { noremap = true, silent = true })

@@ -22,6 +22,7 @@ end
 if vim.fn.exists("g:vscode") == 0 then
 	-- only load plugins if not in VSCode
 	require("lazy-plugins")
+	vim.cmd.colorscheme("selenized")
 end
 
 -- The line beneath this is called `modeline`. See `:help modeline`

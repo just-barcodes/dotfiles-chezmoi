@@ -112,8 +112,7 @@ tooltip label {
 
 #workspaces button.urgent {
 	background: @error;
-	color: @base;
-	border-color: @maroon;
+	opacity: 0.7;
 }
 
 /* -----------------------------------------------------------------------------
@@ -361,7 +360,7 @@ tooltip label {
 
 #tray > .needs-attention {
 	background-color: @error;
-	border-radius: 6px;
+	border-radius: 12px;
 	color: @base;
 }
 

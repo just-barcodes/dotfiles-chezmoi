@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -euxo pipefail
+
+{{ if not (eq .chezmoi.osRelease.id "arch") }}
+    echo "Not running arch... exiting"
+    exit
+{{ end }}
+
+
+if [ ! -d "$HOME/bin/NiflVeil" ]; then
+    # Clone the repository
+    mkdir -p $HOME/bin/
+    cd $HOME/bin/
+    git clone https://github.com/Mauitron/NiflVeil.git
+    cd NiflVeil/niflveil
+
+    # Build using cargo
+    cargo build --release
+
+    # Copy the binary to your path
+    sudo cp target/release/niflveil /usr/local/bin/
+fi
+
