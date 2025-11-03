@@ -20,8 +20,8 @@ anchor_right = true
 
 [keybinds]
 close = ["Escape"]
-next = ["ctrl n"]
-previous = ["ctrl p"]
+next = ["ctrl n", "Down"]
+previous = ["ctrl p", "Up"]
 toggle_exact = ["ctrl e"]
 resume_last_query = ["ctrl r"]
 quick_activate = ["F1", "F2", "F3", "F4"]
@@ -32,10 +32,11 @@ page_up = ["Page_Up"]
 default = [
   "desktopapplications",
   "calc",
-  # "runner",
   "websearch",
   # "symbols",
   # "files",
+  "bluetooth",
+  "clipboard",
 ] # providers to be queried by default
 empty = [] # providers to be queried when query is empty
 previews = [
@@ -53,10 +54,6 @@ prefix = ";"
 provider = "providerlist"
 
 [[providers.prefixes]]
-prefix = ">"
-provider = "runner"
-
-[[providers.prefixes]]
 prefix = "/"
 provider = "files"
 
@@ -64,17 +61,17 @@ provider = "files"
 prefix = "."
 provider = "symbols"
 
-[[providers.prefixes]]
-prefix = "!"
-provider = "todo"
+# [[providers.prefixes]]
+# prefix = "!"
+# provider = "todo"
 
 [[providers.prefixes]]
 prefix = "="
 provider = "calc"
 
-[[providers.prefixes]]
-prefix = "@"
-provider = "websearch"
+# [[providers.prefixes]]
+# prefix = "@"
+# provider = "websearch"
 
 [[providers.prefixes]]
 prefix = ":"
@@ -110,10 +107,10 @@ bluetooth = [
   { action = "disconnect", bind = "Return", after = "AsyncReload" },
 ]
 
-archlinuxpkgs = [
-  { action = "install", bind = "Return", default = true },
-  { action = "remove", bind = "Return" },
-]
+# archlinuxpkgs = [
+#   { action = "install", bind = "Return", default = true },
+#   { action = "remove", bind = "Return" },
+# ]
 
 calc = [
   { action = "copy", default = true, bind = "Return" },
@@ -121,7 +118,7 @@ calc = [
   { action = "save", bind = "ctrl s", after = "AsyncClearReload" },
 ]
 
-websearch = [{ action = "search", default = true, bind = "Return" }]
+# websearch = [{ action = "search", default = true, bind = "Return" }]
 
 desktopapplications = [
   { action = "start", default = true, bind = "Return" },
@@ -142,33 +139,23 @@ files = [
   { action = "copyfile", label = "copy file", bind = "ctrl c" },
 ]
 
-todo = [
-  { action = "save", default = true, bind = "Return", after = "ClearReload" },
-  { action = "delete", bind = "ctrl d", after = "ClearReload" },
-  { action = "active", bind = "Return", after = "ClearReload" },
-  { action = "inactive", bind = "Return", after = "ClearReload" },
-  { action = "done", bind = "ctrl f", after = "ClearReload" },
-  { action = "change_category", bind = "ctrl y", label = "change category", after = "AsyncClearReload" },
-  { action = "clear", bind = "ctrl x", after = "ClearReload", global = true },
-]
-
-runner = [
-  { action = "run", default = true, bind = "Return" },
-  { action = "runterminal", label = "run in terminal", bind = "shift Return" },
-]
+# todo = [
+#   { action = "save", default = true, bind = "Return", after = "ClearReload" },
+#   { action = "delete", bind = "ctrl d", after = "ClearReload" },
+#   { action = "active", bind = "Return", after = "ClearReload" },
+#   { action = "inactive", bind = "Return", after = "ClearReload" },
+#   { action = "done", bind = "ctrl f", after = "ClearReload" },
+#   { action = "change_category", bind = "ctrl y", label = "change category", after = "AsyncClearReload" },
+#   { action = "clear", bind = "ctrl x", after = "ClearReload", global = true },
+# ]
 
 symbols = [
   { action = "run_cmd", label = "select", default = true, bind = "Return" },
 ]
 
-unicode = [
-  { action = "run_cmd", label = "select", default = true, bind = "Return" },
-]
-
-nirisessions = [
-  { action = "start", label = "start", default = true, bind = "Return" },
-  { action = "start_new", label = "start blank", bind = "ctrl Return" },
-]
+# unicode = [
+#   { action = "run_cmd", label = "select", default = true, bind = "Return" },
+# ]
 
 clipboard = [
   { action = "copy", default = true, bind = "Return" },
