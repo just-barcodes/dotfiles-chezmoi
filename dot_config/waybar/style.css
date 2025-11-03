@@ -6,7 +6,9 @@
 *
 * =========================================================================== */
 
-@import 'themes/kanagawa.css';
+/* @import 'themes/kanagawa.css'; */
+@import 'themes/tokyo_night.css';
+/* @import 'themes/catppuccin.css'; */
 
 /* -----------------------------------------------------------------------------
 * Base styles
@@ -79,7 +81,7 @@ tooltip label {
 	color: @base;
 	font-weight: bold;
 	opacity: 1;
-	border-color: @pink;
+	/* border-color: @pink; */
 }
 
 #workspaces button.active,
@@ -88,7 +90,7 @@ tooltip label {
 	color: @base;
 	font-weight: bold;
 	opacity: 1;
-	border-color: @pink;
+	/* border-color: @pink; */
 	/*
 	background: @background-secondary;
 	color: @base;

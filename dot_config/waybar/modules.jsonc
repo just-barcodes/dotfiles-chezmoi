@@ -11,7 +11,6 @@
     "on-click": "activate",
     "active-only": false,
     // "all-outputs": true,
-    // "format": "{}",
     "format": "{icon}",
     // "icon-size": 80,
     "format-icons": {
@@ -23,7 +22,7 @@
       "3": "[k]",
       "4": "[l]",
       "50": "",  // tmux; alt icon: 
-      "60": "󰅨",  // vscode / ide; alt icon: 󰨞
+      "60": "󰨞",  // vscode / ide; alt icon: 󰅨
       "70": "󰠮",  // obsidian
       "80": "",  // AI
       "90": "",  // email
