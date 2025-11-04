@@ -97,20 +97,19 @@
     }
   },
 
-  // Backlight
   "backlight": {
     "format": "{icon} {percent: >3}%",
     "format-icons": ["", ""],
-    "on-scroll-down": "brightnessctl set 5%-",
-    "on-scroll-up": "brightnessctl set +5%"
+    "on-scroll-down": "swayosd-client --brightness lower",
+    "on-scroll-up": "swayosd-client --brightness raise",
+    "on-click": "swayosd-client --brightness 100"
   },
 
   // Audio
   "pulseaudio": {
-    "scroll-step": 1,
+    "scroll-step": 1,  // ignored, controlled by swayosd config
     "format": "{icon} {volume: >3}% {format_source}",
     "format-bluetooth": "{icon} {volume: >3}% {format_source}",
-    // "format-muted": " muted",
     "format-muted": " muted {format_source}",
     "format-source": " {volume}%",
     "format-source-muted": "",
@@ -124,8 +123,11 @@
       "default": ["", ""]
     },
     "on-click": "pavucontrol",
-    "on-scroll-up": "pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob",
-    "on-scroll-down": "pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob"
+    "on-click-middle": "swayosd-client --output-volume mute-toggle",
+    "on-click-right": "swayosd-client --input-volume mute-toggle",
+    "on-scroll-up": "swayosd-client --output-volume raise",
+    "on-scroll-down": "swayosd-client --output-volume lower",
+    "tooltip-format": "{desc}\nVolume: {volume}%"
   },
 
   // Network
@@ -167,23 +169,24 @@
 
   // Notifications (SwayNC)
   "custom/notification": {
-    "tooltip-format": "Left: Notifications\nRight: Do not disturb",
-    "format": "{icon}",
+    "tooltip": true,
+    "format": "{icon} {0}",
     "format-icons": {
-      "notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
-      "none": "",
-      "dnd-notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
-      "dnd-none": "",
-      "inhibited-notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
-      "inhibited-none": "",
-      "dnd-inhibited-notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
-      "dnd-inhibited-none": ""
+      "notification": "<span foreground='#ff8c00'>󰂚</span>",
+      "none": "󰂚",
+      "dnd-notification": "<span foreground='#ff8c00'>󰂛</span>",
+      "dnd-none": "󰂛",
+      "inhibited-notification": "<span foreground='#ff8c00'>󰂚</span>",
+      "inhibited-none": "󰂚",
+      "dnd-inhibited-notification": "<span foreground='#ff8c00'>󰂛</span>",
+      "dnd-inhibited-none": "󰂛"
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
+    // "on-click-middle": "swaync-client -C",
     "escape": true
   },
 
