@@ -1,0 +1,26 @@
+#!/bin/bash
+set -euxo pipefail
+
+if [[ "${SAM_IS_LAPTOP:-}" != "true" ]]; then
+	echo "SAM_IS_LAPTOP not set to true — skipping laptop setup"
+	exit 0
+fi
+
+{{ if not (eq .chezmoi.osRelease.id "arch") }}
+	echo "Not running arch... exiting"
+	exit
+{{ end }}
+
+
+# Laptop specific
+LAPTOP_PACKAGES=(
+	sof-firmware
+	iio-sensor-proxy
+	fprintd
+
+)
+
+
+sudo pacman -Syyu --needed --noconfirm \
+	"${LAPTOP_PACKAGES[@]}"
+

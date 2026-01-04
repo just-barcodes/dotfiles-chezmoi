@@ -72,14 +72,6 @@ DEVELOPER_PACKAGES=(
 )
 
 
-# Laptop specific
-LAPTOP_PACKAGES=(
-	sof-firmware
-	iio-sensor-proxy
-	fprintd
-
-)
-
 
 # Fonts
 FONTS_PACKAGES=(
@@ -124,10 +116,8 @@ APPS_PACKAGES=(
 
 # KDE Apps
 KDE_PACKAGES=(
-	konsole
 	ark
 	isoimagewriter
-	kwalletmanager
 	kcalc
 	dolphin
 	dolphin-plugins
@@ -135,13 +125,14 @@ KDE_PACKAGES=(
 	bluedevil
 	system-config-printer
 )
+# konsole
+# kwalletmanager
 
 
 sudo pacman -Syyu --needed --noconfirm \
 	"${SYSTEM_PACKAGES[@]}" \
 	"${HYPRLAND[@]}" \
 	"${DEVELOPER_PACKAGES[@]}" \
-	"${LAPTOP_PACKAGES[@]}" \
 	"${FONTS_PACKAGES[@]}" \
 	"${APPS_PACKAGES[@]}" \
 	"${KDE_PACKAGES[@]}"
