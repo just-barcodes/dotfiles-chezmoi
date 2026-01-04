@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Youtube
+Exec=/usr/bin/zen-browser --no-remote https://youtube.com --profile /home/sam/.zen/aoz2c75r.youtube --name "YOUTUBE"
+Icon=/home/sam/.local/share/icons/youtube.svg
+Type=Application
+StartupNotify=true
+Categories=Network;WebBrowser;
+
