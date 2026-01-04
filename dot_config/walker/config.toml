@@ -32,11 +32,11 @@ page_up = ["Page_Up"]
 default = [
   "desktopapplications",
   "calc",
-  "websearch",
+  # "websearch",
   # "symbols",
   # "files",
-  "bluetooth",
-  "clipboard",
+  # "bluetooth",
+  # "clipboard",
 ] # providers to be queried by default
 empty = [] # providers to be queried when query is empty
 previews = [
