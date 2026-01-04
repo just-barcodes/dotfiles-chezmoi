@@ -1,7 +1,8 @@
 [Desktop Entry]
 Name=ChatGPT
-Exec=/usr/bin/zen-browser --no-remote https://chat.openai.com -P chatgpt
+Exec=/usr/bin/zen-browser --no-remote https://chatgpt.com --profile /home/sam/.zen/3u075whs.chatgpt --name "CHATGPT"
 Icon=chatgpt
 Type=Application
 StartupNotify=true
 Categories=Network;WebBrowser;
+
