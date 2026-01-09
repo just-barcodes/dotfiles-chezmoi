@@ -92,17 +92,17 @@ tooltip label {
 	opacity: 1;
 	/* border-color: @pink; */
 	/*
-	background: @background-secondary;
-	color: @base;
-	border-color: @mauve;
-	box-shadow: 0 0 0 2px @mauve inset;
+background: @background-secondary;
+color: @base;
+border-color: @mauve;
+box-shadow: 0 0 0 2px @mauve inset;
 */
 }
 
 /*
 #workspaces button.empty:not(.active):not(.visible) {
-  opacity: 0.3;
-  background: @background-secondary;
+opacity: 0.3;
+background: @background-secondary;
 }
 */
 
