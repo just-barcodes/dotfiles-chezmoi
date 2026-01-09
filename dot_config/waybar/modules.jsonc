@@ -44,7 +44,7 @@
     "on-click": "hyprctl dispatch focusworkspaceoncurrentmonitor 99"
   },
   "cpu": {
-    "format": "󰘚{usage: >2}%",
+    "format": "󰘚 {usage: >2}%",
     "on-click": "hyprctl dispatch focusworkspaceoncurrentmonitor 99"
   },
   "temperature": {
