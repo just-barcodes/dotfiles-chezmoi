@@ -3,6 +3,11 @@
 
 # TODO
 
+
+sudo systemctl enable --now chronyd
+sudo systemctl enable --now bluetooth
+
+
 sudo systemctl enable --now greetd
 
 
@@ -25,6 +30,7 @@ command = "tuigreet --cmd start-hyprland"
 # in the `video` group.
 user = "greeter"
 ```
+
 
 
 
