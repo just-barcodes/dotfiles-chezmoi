@@ -84,7 +84,7 @@ let g:syntastic_python_flake8_args = "--ignore=E501"
 """""""""""""""""""""""""""""""""""""""
 """ leader mappings """
 """""""""""""""""""""""""""""""""""""""
-let mapleader=","
+let mapleader=" "
 
 nnoremap <leader>tt :NERDTreeToggle<CR>
 map <leader>td <Plug>TaskList
