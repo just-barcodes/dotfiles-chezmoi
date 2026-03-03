@@ -40,14 +40,23 @@
 (defalias
 
   ;; Home row mods
-  a (multi f24 (tap-hold $tap-time $hold-time a lmet))
-  s (multi f24 (tap-hold $tap-time $hold-time s lalt))
-  d (multi f24 (tap-hold $tap-time $hold-time d lctl))
-  f (multi f24 (tap-hold $tap-time $hold-time f lsft))
+  a (tap-hold $tap-time $hold-time a lmet)
+  s (tap-hold $tap-time $hold-time s lalt)
+  d (tap-hold $tap-time $hold-time d lctl)
+  f (tap-hold $tap-time $hold-time f lsft)
 
-  j (multi f24 (tap-hold $tap-time $hold-time j rsft))
-  k (multi f24 (tap-hold $tap-time $hold-time k rctl))
-  l (multi f24 (tap-hold $tap-time $hold-time l ralt))
+  j (tap-hold $tap-time $hold-time j rsft)
+  k (tap-hold $tap-time $hold-time k rctl)
+  l (tap-hold $tap-time $hold-time l ralt)
+
+  ;; a (multi f24 (tap-hold $tap-time $hold-time a lmet))
+  ;; s (multi f24 (tap-hold $tap-time $hold-time s lalt))
+  ;; d (multi f24 (tap-hold $tap-time $hold-time d lctl))
+  ;; f (multi f24 (tap-hold $tap-time $hold-time f lsft))
+
+  ;; j (multi f24 (tap-hold $tap-time $hold-time j rsft))
+  ;; k (multi f24 (tap-hold $tap-time $hold-time k rctl))
+  ;; l (multi f24 (tap-hold $tap-time $hold-time l ralt))
 
   ;; Match escape
   g (chord gh g)
